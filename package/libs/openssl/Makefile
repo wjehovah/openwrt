@@ -58,7 +58,7 @@ $(call Package/openssl/Default)
   SECTION:=libs
   SUBMENU:=SSL
   CATEGORY:=Libraries
-  DEPENDS:=+zlib
+  DEPENDS:=+zlib +libpthread
   TITLE+= (libraries)
   ABI_VERSION:=$(PKG_VERSION)
   MENU:=1
@@ -73,7 +73,7 @@ define Package/openssl-util
   $(call Package/openssl/Default)
   SECTION:=utils
   CATEGORY:=Utilities
-  DEPENDS:=+libopenssl
+  DEPENDS:=+libopenssl +libpthread
   TITLE+= (utility)
 endef
 
